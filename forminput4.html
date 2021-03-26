@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: content-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-image: url("https://msmobile.com.vn/upload_images/images/hinh-nen-phong-canh-dep-cho-may-tinh-11.jpg");
+        background-size: cover;
+        height: 100vh;
+    }
+    form{
+        /* margin-bottom: 100px; */
+        width: 300px;
+        min-height: 300px;
+        /* display: flex; */
+        margin: 0 auto;
+        background-color: darkgray;
+        padding: 20px 50px;
+        border-radius: 5px;
+        box-shadow: 2px silver;
+    }
+    form div{
+        margin-bottom: 20px;
+        display: flex;
+        flex-flow: column;
+    }
+    label{
+        margin-bottom: 10px;
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    input, .main{
+        /* margin-top: 15px; */
+        border-radius: 2px;
+        border:none;
+        padding: 10px;
+        /* border: 1px solid #333; */
+        /* outline: none; */
+        /* content: ; */
+    }
+    .click{
+        display: flex;
+        /* align-items: center; */
+    }
+
+    .click button{
+        padding: 10px;
+        border-radius: 2px;
+        border: none;
+        cursor: pointer;
+    }
+    input:focus{
+        border: 2px solid dodgerblue !important; 
+        color: dodgerblue;
+        border: none;
+        outline: dodgerblue;
+    }
+    .main:focus{
+        border: 2px solid dodgerblue !important; 
+        color: dodgerblue;
+        border: none;
+        outline: none;
+    }
+    .click button:first-child{
+        margin-bottom: 10px;
+        background-color: dodgerblue;
+        border: none;
+        color: #fff;
+    }
+    .click button:nth-child(2):hover{
+        background-color: red;
+        color: #fff;
+    }
+    .click button:nth-child(1):hover{
+        background-color: darkblue;
+        color: #fff;
+    }
+    :required{
+        content: "*" !important;
+        color: red;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+</style>
+<body>
+    <div class="container">
+    <form action="https://604f548bc20143001744cc5c.mockapi.io/submit/diemdanh" method="post">
+        <div class="Id">
+        <label>Id</label>
+        <input type="text" maxlength="40" minlength="5" name="id" value="19"></input>
+        </div>
+        <div class="Name">
+            <label>Name</label>
+            <input type="text" maxlength="40" minlength="5" name="Ten" required></input>
+        </div>
+        <div class="MSSV">
+        <label>MSSV</label>
+        <textarea class="main" rows="5" cols="20" placeholder="" name="MSSV" type="number" required></textarea>
+        </div>
+        <div class="MaBiMat">
+        <label>Idea Project</label>
+        <textarea class="main" rows="5" cols="20" placeholder="" name="MaBiMat" required></textarea>
+        </div>
+        <div class="Email">
+            <label>Email</label>
+            <input type="email" maxlength="40" minlength="5" name="Email" required></input>
+        </div>
+        <div class="Phone">
+            <label>Phone</label>
+            <input type="tel" maxlength="12" minlength="10" name="Phone" required></input>
+        </div>
+        <!-- <div class="HTML">
+                <label>HTML</label>
+                <textarea class="main" rows="5" cols="100" placeholder="..." name="HTML:" required></textarea>
+        </div> -->
+        <div class="click">
+            <!-- <input type="search" name="search" placeholder="search"></input> -->
+            <button type="submit" value="submit" class="submit">Submit</button>
+            <button type="submit" value="reset">Reset</button>
+        </div>
+    </form>  
+    </div>
+</body>
+</html>
